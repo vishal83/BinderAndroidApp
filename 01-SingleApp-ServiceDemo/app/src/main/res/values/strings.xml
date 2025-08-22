@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Binder IPC Test</string>
+    <string name="binder_service_description">Service for testing Binder IPC functionality across processes</string>
+</resources>

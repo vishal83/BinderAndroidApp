@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Binder Client</string>
+    <string name="client_description">Inter-app Binder IPC client that connects to server applications for testing cross-process communication</string>
+</resources>

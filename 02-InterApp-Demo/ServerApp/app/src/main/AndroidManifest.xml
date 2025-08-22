@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Define custom permission for service access -->
+    <permission
+        android:name="com.visgupta.binder.SERVER_ACCESS"
+        android:label="Access Binder Server Service"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:label="Binder Server"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BinderServer">
+        
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Binder Server App"
+            android:theme="@style/Theme.BinderServer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Exported Binder Service - accessible by other applications -->
+        <service
+            android:name=".BinderTestService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.visgupta.binder.SERVER_ACCESS">
+            
+            <!-- Intent filter allows other apps to discover this service -->
+            <intent-filter>
+                <action android:name="com.visgupta.binder.TEST_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        
+    </application>
+
+</manifest>

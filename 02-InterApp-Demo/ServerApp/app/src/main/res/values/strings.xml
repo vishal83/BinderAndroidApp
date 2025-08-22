@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Binder Server</string>
+    <string name="service_description">Inter-app Binder IPC test service that provides communication capabilities to client applications</string>
+</resources>
